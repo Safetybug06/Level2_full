@@ -1,0 +1,19 @@
+
+
+/* edit */
+p.moduleText           {font-size:1.27em; margin:.5em 0}
+
+span.multipleChoice {
+margin-top:0; 
+margin-bottom:0; 
+font-size:1.27em; 
+line-height:1.2em;
+margin-left: 30px;
+display: block;
+}
+
+ul.q                   {margin-top:0; margin-bottom:.5em; font-size:1.27em; line-height:1.3em; }
+
+p.score-icon        {color:#fff; font-size:1.8em; margin-bottom:0px; padding-bottom:0px; line-height:1.5em; margin:0;}
+
+

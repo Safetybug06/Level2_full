@@ -1,0 +1,193 @@
+/*
+Theme Name: Safety Bug Training
+Theme URI: http://www.creativecode.com/
+Author: Creative Code
+Author URI: http://www.creativecode.com/
+Description: Creative Code Theme
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: creativecode
+*/
+
+@import url("bootstrap.css");
+
+body .sharesystem:before{top:1px;}
+
+.header-footer-blog .search-form {
+    margin-bottom: 0;
+}
+#header.down {
+    top: 0 !important;
+}
+#header.down img {
+    filter: none !important;
+}
+.home textarea {
+    height: 130px;
+}
+.home .wpcf7-submit {
+    width: 100.5% !important;
+}
+#home-video .wpb_single_image img {
+    width: 110px !important;
+}
+#home-video {
+    padding: 15px 0 10px 0 !important;
+}
+.gallery-accord .vc_tta-title-text {
+    margin-left: 0 !important;
+}
+
+.gallery-accord h4.vc_tta-panel-title:after {
+    content: '';
+    background: url(/wp-content/uploads/2016/09/arrowgreen.png) no-repeat center center !important;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    float: right;
+    position: absolute;
+    top: 14px;
+    right: 54px;
+}
+.faqs .vc_tta-panel-heading h4 {
+    position: relative;
+}
+#menu-item-639 a {
+    background: #058040;
+    color: #fff !important;
+    padding: 10px 15px !important;
+    display: inline;
+}
+.fa-angle-down:before {
+    content: "\f107";
+    display: none !important;
+}
+.page-id-682 .header-style1 {
+    display: none;
+}
+.new-blog h1 {
+    color: #fff;
+    text-align: center;
+    font-size: 55px;
+}
+.cat-button button {
+    min-width: 200px;
+    font-size: 21px !important;
+    font-weight: 700;
+}
+.cat-button {
+    border: 3px solid #f2f2f2;
+    border-radius: 9px;
+    margin: 50px 0 !important;
+    padding-bottom: 10px;
+    background: #f2f2f2;
+}
+.vc_btn3.vc_btn3-color-juicy-pink, .vc_btn3.vc_btn3-color-juicy-pink.vc_btn3-style-flat {
+    background: #058040 !important;
+}
+.home ol.vc_carousel-indicators {
+    display: none;
+}
+.header-flags {
+    display: none;
+}
+#home-flags h3 {
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 24px;
+    padding-bottom: 10px;
+}
+#home-flags {
+    padding: 40px 0 0 !important;
+    background: rgba(5,128,64,0.9);
+}
+.category-filter div {
+    display: inline-block;
+    padding: 0 6px;
+    color: #058040;
+}
+.home .vc_carousel-control .icon-next, .home .vc_carousel-control .icon-prev {
+    color: #fff;
+    font-size: 40px !important;
+    font-weight: bold !important;
+}
+footer .post-date {
+    color: #109754;
+    font-weight: 700;
+}
+
+
+#header .navbar-toggle span {
+        background: #058040 !important;
+}
+
+/* New banner */
+
+#home-revslider .tp-bgimg {
+    position: relative;
+}
+
+#home-revslider .tp-bgimg {
+    position: relative;
+}
+
+#home-revslider h3 {
+    font-family: "Permanent Marker";
+    font-style: normal;
+    color: #fff;
+    
+    font-weight: 400 !important;
+}
+
+#home-revslider .tp-bgimg:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.38);
+}   
+
+#home-revslider {
+    padding-top: 110px;
+}
+
+/*Responsive*/
+
+@media only screen and (min-width: 1299px){
+#home-flags {
+    padding: 40px 0 0 !important;
+    background: rgba(5,128,64,0.9);
+}
+}
+
+
+
+@media (max-width: 768px) {
+
+.header-style7 #homepage-slider .carousel-inner .item h1 {
+    display: block !important;
+    font-size: 39px;
+    line-height: 1.2em;
+        top: 260px;
+}
+
+.header-style7 #homepage-slider .carousel-inner .item, .header-style7 #homepage-slider .carousel-inner {
+    height: 390px !important;
+}
+
+.header-style7 .header-content {
+    display: block;
+}
+
+.header-style7 {
+    display: block;
+    min-height: 0;
+}
+
+
+}

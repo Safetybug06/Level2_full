@@ -1,0 +1,34 @@
+#header li a{font-family:"Source Sans Pro";font-weight:400;font-style:normal;color:#676b6d;font-size:14px;}.social-links li a{color:#666;font-size:14px;}.social-links li a:hover{color:#333;font-size:14px;}
+
+h1{font-family:"Permanent Marker";line-height:55px;font-weight:400;font-style:normal;color:#333;font-size:55px;}
+h2{font-family:"Source Sans Pro";line-height:35px;font-weight:600;font-style:normal;color:#333;font-size:30px;}
+h3{font-family:"Source Sans Pro";line-height:29px;font-weight:600;font-style:normal;color:#333;font-size:26px;}
+h4{font-family:"Source Sans Pro";line-height:26px;font-weight:600;font-style:normal;color:#000000;font-size:22px;}
+h5{font-family:"Source Sans Pro";line-height:26px;font-weight:600;font-style:normal;color:#333;font-size:20px;}
+h6{font-family:"Source Sans Pro";line-height:20px;font-weight:600;font-style:normal;color:#333;font-size:18px;}
+p,body{font-family:"Source Sans Pro";line-height:24px;font-weight:400;font-style:normal;color:#666;font-size:16px;}
+a{font-family:"Source Sans Pro";line-height:24px;font-weight:400;font-style:normal;color:#058040;font-size:16px;}
+#twitter-plugin h2, #twitter-plugin h2 a{font-family:Ubuntu;text-align:left;font-weight:400;font-style:normal;color:#FFFFFF;font-size:35px;}
+#twitter-slider{height:130px;}#twitter-slider .carousel-inner{font-family:Ubuntu;text-align:left;font-weight:400;font-style:normal;color:#FFFFFF;font-size:16px;}
+.twitter_widget .twitter-username{font-weight:400;color:#6b6b6b;font-size:16px;}
+.twitter_widget .twitter-logo{font-weight:400;color:#FFFFFF;font-size:22px;}
+.twitter_widget .twitter-logo{background-color:#058040;}
+.twitter_widget #twitter-slider .item{line-height:20px;font-weight:400;color:#000;font-size:13px;}
+
+
+/* admin hero image with strapline */
+p.adminStrapline            {font-family:Source Sans Pro, arial; text-align:center; color:#fff; font-size:30px; font-style:italic; margin-top:60px}
+
+/* Media Queries */
+
+@media screen and (max-width:562px) 
+{ 
+h1{font-size:35px;}
+}
+
+@media screen and (max-width:410px) 
+{ 
+h1                          {font-size:25px;}
+p.adminStrapline            {font-size:20px}
+
+}

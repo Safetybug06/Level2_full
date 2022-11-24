@@ -1,0 +1,262 @@
+
+
+
+/* sign-up form number of users */
+fieldset   {border-radius:5px;}
+
+
+label {
+  font-size:1em;
+    display: inline-block;
+    margin: 0;
+    line-height:1.2em;
+  /*  height:1em; */
+    vertical-align: top;  margin-bottom:.5em; font-weight:normal;
+	cursor: pointer;
+}
+
+label   input[type="radio"] {
+margin-right:1em
+}
+
+
+
+/* Pagination */
+div.pagination { 
+	padding: 3px;
+	margin: 3px; float:right
+}
+
+div.pagination a {
+	padding: 2px 5px;
+	margin: 0 2px;
+	border: 1px solid #399a67; border-radius:2px;
+	
+	text-decoration: none; /* no underline */
+	color: #057F3F;
+}
+div.pagination a:hover, div.pagination a:active {
+	border: 1px solid #057F3F;
+		background-color: #057F3F;
+		color: #FFF;
+}
+div.pagination span.current {
+	padding: 2px 5px 2px 5px;
+	margin: 2px;
+		border: 1px solid #057F3F;
+		
+		font-weight: bold;
+		background-color: #057F3F;
+		color: #FFF;
+	}
+	div.pagination span.disabled {
+		padding: 2px 5px 2px 5px;
+		margin: 2px;
+		border: 1px solid #EEE;
+	
+		color: #DDD;
+	}
+
+
+
+/* admin passed colour codes */
+.passed-green   {color:#057F3F; font-weight:bold; }
+.passed-red     {color:#FF0000; font-weight:bold; }
+
+
+
+/* forgotten password */
+.forgotten-password   {font-weight:bold; font-style:italic}
+
+/* table login */
+.login-res              {width:60%; }
+.activate-res           {width:60%; /*  border:1px solid #00ff00 */  }
+
+ /*
+ form validation
+*/
+#orderForm .error , #activate2_form .error, #generate-pdf .error {
+color:#ff0000; 
+}
+
+#activate2_form .error.valError {
+
+ border:#ff0000 solid 1px
+}
+
+.err_highlight {  border:#fff solid 1px }
+
+
+
+ul.user-admin {
+   margin-left:-20px 
+}
+ul.user-admin li{
+  background: url(../images/ul-admin-bullet.png) no-repeat 7px 7px transparent;
+    list-style-type: none;
+    margin: 0;
+    padding: 10px 10px 10px 50px;
+    vertical-align: middle;
+	
+}
+
+ul.signUp    {     margin-left:10px; margin-bottom:10px }
+ul.signUp li  {    padding-left: 20px   }
+
+
+
+
+.admin-serials                      {border:1px solid #C7C7C7}
+.admin-serials td.download          {text-align:center}
+.admin-serials td a                 {text-decoration:underline}
+.admin-border-right                 {border-right:1px solid #C7C7C7; padding:10px}
+.admin-border-right-center          {border-right:1px solid #C7C7C7}
+.admin-border-top                   {border-top:1px solid #C7C7C7}
+
+
+/* admin module progress */
+#tableScroll         {width:100%; overflow:auto; margin:0 auto;}
+.even td             {color:#000; font-size: .8em; background:#E5E9E6; text-align:left}
+.odd td              {color:#000; font-size: .8em; background:#F0F2F0; text-align:left}
+td.highlight         {background: none repeat scroll 0 0 #058040; color: #FFFFFF; font-size: 0.9em;}
+
+
+
+
+
+select.dropdown {
+border:#C7C7C7 1px solid;  height:2.5em;   border-radius:3px;
+  width: 100%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: url('../images/arrow.png') no-repeat 100% ;
+
+}
+
+select::-ms-expand { /* for IE 11 */
+    display: none;
+}
+
+.circle-wrapper         {width:100%; padding:3em 0 2em 0;}  
+.circle-container       {margin:auto;overflow:auto; width:40%;}  
+
+.numberCircle {
+	display:block;margin:auto;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    padding:20px;line-height:54px;
+    font-family:"Source Sans Pro";font-weight:400;font-style:normal;
+	font-size:3em;
+}  
+
+.numberCircleType {
+font-size:1.2em;   line-height:34px;
+}  
+
+.grey-circle      {border: 1px solid #C7C7C7;    color: #C7C7C7;}
+.green-circle     {border: 1px solid #058040;    color: #058040;} 
+.grey-type        {color: #C7C7C7;}
+.green-type       {color: #058040;} 
+
+
+.numberCircle-container
+{
+ text-align:center; width:33%; float:left; /* border: 1px solid #00ff00 ; */ 
+} 
+
+
+
+#wrapper               {/*border:1px solid #00ff00 */} 
+
+#content               { width:60%; margin:auto}
+
+#colOne                {border:1px solid #555}
+
+h3                               {line-height:2em;}
+h4.center              {font-family:"Source Sans Pro";color:#058040;text-align:center; font-size:1.7em; line-height:2.5em; }
+
+input[type=password],input[type=text]    {width:100%; border:#C7C7C7 1px solid;  height:2.5em;   border-radius:5px;}
+
+/*
+.log-button           {border-radius:5px;background:transparent;border:1px solid #058040; color:#058040; padding:.6em 3em;transition:.5s;-o-transition:.5s;-ms-transition:.5s;-moz-transition:.5s;-webkit-transition:.5s}
+.log-button:hover     {border-radius:5px;background:#058040; color:#fff;}
+*/
+
+.log-button           {
+font-family:"Source Sans Pro";
+  font-size:1.2em;
+border-radius:5px;
+background:transparent;
+border:1px solid #058040; 
+color:#058040; 
+padding:.5em 2.5em;
+transition:.5s;-o-transition:.5s;-ms-transition:.5s;
+-moz-transition:.5s;
+-webkit-transition:.5s;
+cursor: pointer;}
+
+.log-button:hover     {background:#058040; color:#fff;}
+
+
+
+.right                {float:right;}
+.center-text          {text-align:center}
+
+
+/* activate login */
+input.activate-field         {width:22%; margin-right:.8em; float:left; text-align:center}
+input.activate-field2        {width:22%;    float:left; text-align:center}
+ 
+ 
+ 
+ 
+
+@media screen and (max-width:1189px) 
+{ 
+.circle-container       {width:60%} 
+#content                {width:80%}
+.activate-res           {width:80%}
+input.activate-field    {width:20%; }
+input.activate-field2   {width:20%; } 
+}
+
+
+@media screen and (max-width:832px) 
+{ 
+.circle-container       {width:80%} 
+.login-res              {width:100%} 
+}
+
+
+@media screen and (max-width:498px) 
+{ 
+.numberCircle                {width:60px; height:60px; padding:10px;line-height:36px;	font-size:1.8em;}
+.activate-res               {width:100%}
+input.activate-field    {width:18%; margin-right:.2em; }
+input.activate-field2   {width:18%; }
+}
+
+@media screen and (max-width:407px) 
+{ 
+.numberCircleType {font-size:.8em;} 
+}
+
+
+@media screen and (max-width:318px) 
+{ 
+.circle-container       {width:100%; } 
+.numberCircle {
+
+    width:40px;
+    height:40px;
+    padding:7px;line-height:20px;
+	font-size:1.5em;
+}  
+
+}
+
+
+
+

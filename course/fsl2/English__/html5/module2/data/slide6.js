@@ -1,0 +1,3 @@
+(function(){var loadHandler=window['sl_{D962D8B8-2053-4DCA-BA25-C01F97FCC4C0}'];loadHandler&&loadHandler(5, '<div id="spr0_44537e53"><div id="spr1_44537e53" class="kern slide"><img id="img2_44537e53" src="data/img2.png" width="960px" height="540px" alt="" style="left:0px;top:0px;"/></div><div id="spr2_44537e53" class="kern slide"><div id="spr3_44537e53" style="top:-0.545px;"><img id="img0_44537e53" src="data/img9.png" width="959" height="541" alt="" style="left:0.016px;top:-0.227px;"/></div><div id="spr4_44537e53" style="left:292.062px;top:66.864px;"><img id="img1_44537e53" src="data/img10.jpg" width="395" height="279" alt="A close up of a flower\
+\
+Description automatically generated" style="left:-0.061px;top:0.088px;"/></div></div></div>');})();

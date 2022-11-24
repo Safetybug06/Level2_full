@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600&display=swap');
+
+.moduleContainer   {width:100%;  overflow:auto;}
+
+.questionFull   {float:left; margin-left:10%; width:80%;  }
+.questionHalf   {float:left; margin-left:10%;  width:50%; }
+
+.modulePicRight        {width:32%; float:right; margin-right:5%; }
+.modulePicRes        {width:100%; float:left; display:none}
+
+img {display:block}
+body   {font-family:"Source Sans Pro"; color:#666; margin:0;}
+
+h3                                 {font-weight:600; color:#333; font-size:1.7em; margin:.5em 0}
+h3.moduleTitle         {color:#058040}
+
+
+p.time-readout    {color:#fff; font-size:1.7em;  margin-bottom:0px; padding-bottom:0px; line-height:.5em; margin-top:18px} 
+
+
+#questionTable  ul {padding-left:1em}
+
+
+label {
+    display: inline-block;
+    margin: 0;
+    vertical-align: top;  margin-bottom:.5em; font-weight:normal; 
+	cursor: pointer;
+}
+  
+/* QA radio buttons */
+		input[type=radio].qaButton {
+    float: left;
+}
+
+	
+.log-button           {
+font-family:"Source Sans Pro";
+  font-size:1.2em;
+border-radius:5px;
+background:transparent;
+border:1px solid #058040; 
+color:#058040; 
+padding:.5em 2.5em;
+transition:.5s;-o-transition:.5s;-ms-transition:.5s;
+-moz-transition:.5s;
+-webkit-transition:.5s;
+cursor: pointer;}
+
+.log-button:hover     {background:#058040; color:#fff;}
+ 
+
+ hr {
+   /* margin-top: 20px; */
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 1px solid #eee;
+}
+ 
+ 
+
+/* QA ICONS #000    */
+#blk-wrapper      {width:100%; background:#000; border-top:2px solid #000; overflow:auto}
+
+#icon-wrapper     {float:left; height:50px; width:17%; }
+#icon-container   {width:100px; height:50px; float:right; }
+
+
+#score-container  {float:left;  height:50px; width:60%; }
+
+
+.icon-on          {background-image:url(../images/QA_BUG.jpg); width:49px; height:48px}
+.icon-off         {background-image:url(../images/QA_BUG-off.jpg); width:49px; height:48px}
+
+
+#time-container   {width:20%;  float:right;  }
+
+.buttons-fail            {width:50%; overflow:auto}
+.button-fail-left    {width:50%; float:left;}
+
+
+/* result QA survey buttons */
+.surveyButtonContainer    {width:50%; overflow:auto}
+.surveyLeft               {width:50%;  float:left;}
+.surveyRight              {width:50%; float:right;}
+
+
+/* survey text box */
+.surveyText               {border:1px solid #ccc; width:60%; height:8em}
+
+/* survey validation */
+#groupErrors{
+color:#ff0000; 
+}
+
+
+
+@media screen and (max-width:1189px) 
+{ 
+.buttons-fail                    {width:90%}
+.surveyButtonContainer  {width:90%;}            
+}
+
+
+@media screen and (max-width:832px) 
+{ 
+.surveyButtonContainer    {width:100%}
+.buttons-fail                      {width:100%}
+.surveyText                          {width:100%}  
+}
+
+
+@media screen and (max-width:765px) 
+{ 
+#icon-wrapper                   {width:100%; text-align:center}
+#icon-container               {float:none; margin: 0 auto; }
+#score-container              {float:left;  width:100%; text-align:center; height:45px;}
+p.score-icon                     {text-align:center; margin-top:5px}
+#time-container               {width:100%;  float:left; margin-bottom:10px}
+p.time-readout                 {line-height:.6em; margin-top:0; text-align:center}
+#blk-wrapper                     {border-top:0; overflow: hidden}
+.modulePicRight               {display:none }
+.modulePicRes                   {display:block}
+.questionHalf                   { width:80%;}
+}          
+
+
+@media screen and (max-width:592px) 
+{ 
+/*.button-fail-right           {width:96%; text-align:center; padding:2%}*/
+.button-fail-left            {width:96%; text-align:center; padding:2%}
+}          
+
+
+@media screen and (max-width:498px) 
+{   
+.surveyLeft             {width:100%;  float:left; text-align:center; margin-bottom:10px}        /*survey */  
+.surveyRight            {width:100%;   float:left; text-align:center;}      
+}
+
+
+
+@media screen and (max-width:375px) 
+{ 
+p.score-icon     {font-size:1.2em;}
+}
+
+
+
+
+
