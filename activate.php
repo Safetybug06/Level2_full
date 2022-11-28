@@ -1,5 +1,4 @@
 <?php include('config.php'); ?>
-
 <?php
 
 $err = "";
@@ -58,34 +57,8 @@ if(isset($_GET['failed']))
 
 ?>
 
-<?php include('header.php') ?>
 
-
-
-
-
-<section class="header header-style2 strapline" style="background:url(images/img_04.jpg) 50% 50%;  background:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url(images/img_04.jpg) 50% 50% ; background-size:cover;">
-
-    <div class="header-content">
-
-	    <h1>
-
-	ACTIVATE</h1><p class="adminStrapline">
-
-    Scroll down to activate</p>
-
-    </div>
-
-</section>
-
-
-
-
-
-
-
-
-
+<?php include('header1.php'); ?>
 <script type="text/javascript">	
 
 <!--
@@ -148,156 +121,153 @@ if(isset($_GET['failed']))
 
 </script>
 
-
-
-
-
+            <!-- Process Section Start -->
+            <div class="rs-process style1  pt-100 pb-100 md-pt-70 md-pb-70">
+                <div class="container pb-54">
+                    <div class="process-effects-layer">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-6 md-mb-30" style="opacity: 50%;" >
+                                <div class="rs-addon-number">
+                                    <div class="number-part">
+                                        <a href="paypal.php">
+                                        <div class="number-image">
+                                            <img src="assets/images/process/style1/1.png" alt="Process">
+                                        </div>
+                                    </a>
+                                        <div class="number-text">
+                                            <div class="number-area"> <span class="number-prefix"> 1 </span></div>
+                                            <div class="number-title">
+                                                <h3 class="title"> Purchased</h3>
+                                            </div>
+                                            <div class="card-subtitle">
+                                               Purchase Completed
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 md-mb-30">
+                                <div class="rs-addon-number">
+                                    <div class="number-part">
+                                        <a href="activate.html">
+                                        <div class="number-image-active">
+                                            <img src="assets/images/process/style1/2.png" alt="Process">
+                                        </div>
+                                    </a>
+                                        <div class="number-text">
+                                            <div class="number-area"> <span class="number-prefix"> 2 </span></div>
+                                            <div class="number-title">
+                                                <h3 class="title">Activation
     
+                                                </h3>
+                                            </div>
+                                            <div class="card-subtitle">
+                                                Enter You Activation Code In Below Boxes
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6" style="opacity: 50%;">
+                                <div class="rs-addon-number">
+                                    <div class="number-part">
+                                        <a href="user-admin.php">
+                                        <div class="number-image">
+                                            <img src="assets/images/process/style1/4.png" alt="Process">
+                                        </div>
+                                    </a>
+                                        <div class="number-text">
+                                            <div class="number-area"> <span class="number-prefix"> 3 </span></div>
+                                            <div class="number-title">
+                                                <h3 class="title">Start Course</h3>
+                                            </div>
+                                            <div class="card-subtitle">
+                                               Once You activate Course You Will Received Id Pass In Your E-mail
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                  </div>
+                  <!-- Process Section End -->
 
-<div class="circle-wrapper">
-
-<div class="circle-container">
-
-
-
-<div class="numberCircle-container">
-
-<div class="numberCircle grey-circle">1</div>
-
-<p class="numberCircleType grey-type">
-
-Purchasing
-
-</p>
-
-</div>
-
-
-
-<div class="numberCircle-container">
-
-<div class="numberCircle green-circle">2</div>
-
-<p class="numberCircleType green-type">
-
-Activating
-
-</p>
-
-</div>
-
-
-
-
-
-<div class="numberCircle-container">
-
-<div class="numberCircle grey-circle">3</div>
-
-<p class="numberCircleType grey-type">
-
-Starting
-
-</p>
-
-</div>
-
-
-
-</div>
-
-</div>
-
-
-
-
-
-
-
-
-
-	<div id="content">
-
-
-
- 	<h3 class="green">Activate</h3>
-
-
-
-<p>Enter the 16 digit serial number in the boxes provided, then click on the submit button. You will now automatically be taken to the final sign up page 'user details' to select your language.</p>
-
-
-
+		<!-- Start Account Area -->
+        <div id="content" class="account-area">
+            <div class="d-table">
+                <div class="d-table-cell">
+                    <div class="container">
+                        <div class="account-content">
+                            <div class="account-header">
+                                <a href="index.html">
+                                    <img src="assets/images/SBT-logo-01.png" width="160" height="40" alt="main-logo">
+                                </a>
+                                <h3>Activate your Account</h3>
+                            </div>
+                            <div class="alert alert-success" role="alert">
+                                <h4 class="alert-heading">Enter the 16 digit serial number</h4>
+                                <p>In the boxes provided, then click on the submit button. You will now automatically be taken to the final sign up page 'user details' to select your language.</p>
+                               
 <?php
 
 
 
-	if ($err != "") echo '<p style="font-weight:bold">'.$err.'</p>';
+if ($err != "") echo '<p style="color:red;font-weight:bold">'.$err.'</p>';
 
 
 
 ?>
 
+<p id="required-note" style="display:none; color:red; font-weight:bold">Please enter serial</p>
 
+                            </div>
+                            
+                           
+                            <form  id="activate_form" name="activate_form" action="" method="post" class="account-wrap">
+                                <div class="row g-1 mb-24">
+                                    
+                                    <div class="col-sm">
+                                        <input name="serial1" type="text" maxlength="4" placeholder="1234"  class="form-control required" onkeyup="autotab(this, document.activate_form.serial2)" />
+                                    </div>
+                                    <div class="col-sm">
+                                        <input name="serial2" type="text" maxlength="4" placeholder="1234"  class="form-control required" onkeyup="autotab(this, document.activate_form.serial3)"   />
+                                    </div>
+                                    <div class="col-sm">
+                                        <input name="serial3" type="text" maxlength="4" class="form-control required" placeholder="1234" onkeyup="autotab(this, document.activate_form.serial4)" />
+                                    </div>
+                                    <div class="col-sm">
+                                        <input name="serial4" type="text" maxlength="4" class="form-control required" placeholder="1234"  />
+                                    </div>
+                                </div>
+                                <div class="progress mb-3">
+                                    <div class="progress-bar progress-bar-striped bg-success" role="progressbar" aria-label="Success striped example" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <div class="form-group mb-24">
+                                    <button name="" id="submit_btn" type="submit" value="Submit" class="default-btn">Submit</button>
+                                </div>
+                                <div class="form-group mb-24 text-center">
+                                    <p class="account">Not A Member? <a href="paypal.php">Create An Account</a></p>
+                                </div>
+                            </form>
+        
+                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Account Area -->
 
-<p id="required-note" style="display:none; font-weight:bold">Please enter serial</p>
-
-
-
-<form id="activate_form" name="activate_form" action="" method="post">
-
-
-
-<table class="activate-res">
-
-<tr>
-
-
-
-<td class="form-right-td">
-
-<input name="serial1" type="text" maxlength="4"  class="activate-field required" onkeyup="autotab(this, document.activate_form.serial2)" />
-
-<input name="serial2" type="text" maxlength="4"  class="activate-field required" onkeyup="autotab(this, document.activate_form.serial3)"   />
-
-<input name="serial3" type="text" maxlength="4"  class="activate-field required" onkeyup="autotab(this, document.activate_form.serial4)" />
-
-<input name="serial4"  type="text" maxlength="4" class="activate-field required" class="required" />
-
-</td>
-
-</tr>
-
-
-
-<tr>
-
-
-
-<td class="form-right-td"><br/><input name="" id="submit_btn" type="submit" value="Submit" class="log-button right"  /></td>
-
-</tr>
-
-
-
-</table>
-
-
-
-</form>
-
-
-
-
-
-
-
-			</div><!-- content -->
-
-		</div><!-- wrapper -->
-
-
-
-		
-
-<?php include('footer.php') ?>
+<!-- 
+     
+        <script>
+            function autotab(current,to){
+                if (current.getAttribute && 
+                  current.value.length==current.getAttribute("maxlength")) {
+                    to.focus() 
+                    }
+            }
+            </script> -->
+<?php include('footer2.php'); ?>

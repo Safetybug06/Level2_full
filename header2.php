@@ -92,7 +92,7 @@ $_SESSION["paginationBack"] =  'orderNumberSelect='. $orderNumberRef ."&page=". 
                                 </div>
         
                                 <div class="main-logo">
-                                    <a href="index.html">
+                                    <a href="http://safetybugtraining.com"">
                                         <img src="assets/images/Safetybug white.png" width="250" alt="main-logo">
                                     </a>
                                 </div>
@@ -123,6 +123,12 @@ $_SESSION["paginationBack"] =  'orderNumberSelect='. $orderNumberRef ."&page=". 
                                         <?php if(isset($_SESSION["admin_username"])){ ?>
                                             <h3><?php echo strtoupper  ($_SESSION["admin_fullname"]);?></h3>
                                             <span> Admin</span>
+                                          
+                                        </div>
+                                        <div class="d-none d-lg-block d-md-block">
+                                        <?php }  elseif (isset($_SESSION["username"])){ ?>
+                                            <h3><?php echo strtoupper ($_SESSION["fullname"]);?></h3>
+                                            <span> Learning Dashboard</span>
                                             <?php }  ?>
                                         </div>
                                     </a>

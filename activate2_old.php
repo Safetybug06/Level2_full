@@ -348,45 +348,53 @@ if (isset($_SESSION["paginationBack"]) && (strlen($_SESSION["paginationBack"]) >
 
 }
 ?>
-<?php include('header2.php'); ?>
-  <!-- Start Main Content Area -->
-  <main class="main-content-wrap2">
 
-             
+<?php include('header.php'); ?>
 
-<!-- Process Section Start -->
-<div class="rs-process style1  pt-100 pb-100 md-pt-70 md-pb-70">
-<div class="container pb-54">
-  <div class="process-effects-layer">
-      <div class="row">
-          
-          <div class="col-lg-12 col-md-6 md-mb-30">
-              <div class="rs-addon-number">
-                  <div class="number-part">
-                      <a href="#">
-                      <div class="number-image">
-                          <img src="assets/images/process/style1/power.png" alt="Process">
-                      </div>
-                  </a>
-                      <div class="number-text">
-                          <div> <span class="number-prefix">  </span></div>
-                          <div class="number-title">
-                              <h3 class="title">User Activation
 
-                              </h3>
-                          </div>
-                          <div class="card-subtitle">
-                             Admin can Activate New User / Modify Currunt User  from Here
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-        
-      </div>
-  </div>
+<section class="header header-style2 strapline" style="background:url(images/img_04.jpg) 50% 50%;  background:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url(images/img_04.jpg) 50% 50% ; background-size:cover;">
+    <div class="header-content">
+	    <h1>
+	ACTIVATE</h1><p class="adminStrapline">
+    Scroll down to activate</p>
+    </div>
+</section>
+
+
+<div class="circle-wrapper">
+<div class="circle-container">
+
+<div class="numberCircle-container">
+<div class="numberCircle grey-circle">1</div>
+<p class="numberCircleType grey-type">
+Purchasing
+</p>
+</div>
+
+<div class="numberCircle-container">
+<div class="numberCircle green-circle">2</div>
+<p class="numberCircleType green-type">
+Activating
+</p>
+</div>
+
+
+<div class="numberCircle-container">
+<div class="numberCircle grey-circle">3</div>
+<p class="numberCircleType grey-type">
+Starting
+</p>
+</div>
+
 </div>
 </div>
+
+
+
+
+	<div id="content">
+
+		
 <script type="text/javascript">	
 
 $(document).ready(function(){
@@ -579,12 +587,18 @@ email: "Please enter username (10 char.)",
 
 
 </script>
- <div id="card" class="card-box-style2">
-  <div class="others-title">
-      <h3><?php if(isset($_SESSION["admin_username"])) echo ($serial_details['activated']=="yes") ? "Edit serial" : "Admin Serial Activation"; else echo "User Details"?></h3>
-      <p><?php if ($serial_details['activated']!="yes") if(isset($_SESSION["admin_username"])) echo "To activate the serial on behalf of student, please provide the following information:"; else echo "To activate serial please provide the following information:"?></p>
-    </div>
-    <?php
+
+
+ 	<h3 class="green"><?php if(isset($_SESSION["admin_username"])) echo ($serial_details['activated']=="yes") ? "Edit serial" : "Admin Serial Activation"; else echo "User Details"?></h3>
+
+	
+	
+
+		<p><?php if ($serial_details['activated']!="yes") if(isset($_SESSION["admin_username"])) echo "To activate the serial on behalf of student, please provide the following information:"; else echo "To activate serial please provide the following information:"?></p>
+
+		
+
+		<?php
 
 			if ($err != "") echo '<p class="error" style="font-weight:bold; color:#ff0000; ">'.$err.'</p>';
 
@@ -598,32 +612,37 @@ email: "Please enter username (10 char.)",
 				list($first_name, $last_name) = array('', '');
 		}
 		?>
-  <form id="activate2_form" action="" method="post" class="row g-3">
-  
+
+		<form id="activate2_form" action="" method="post">
 
 <table class="activate-res">
 
-        <div class="row">
-           <div class="col"><p>First Name</p>
-            <input name="first_name" type="text"  class="form-control" value="<?php echo (isset($_POST['first_name']) ? $_POST['first_name'] : $first_name); ?>"   <?php  if($serial_details['resit-order'] != '') { echo "readonly";} ?> class="valError" />
+			<tr>
+
+
+
+			<td><p>First Name</p>
+            <input name="first_name" type="text"  value="<?php echo (isset($_POST['first_name']) ? $_POST['first_name'] : $first_name); ?>"   <?php  if($serial_details['resit-order'] != '') { echo "readonly";} ?> class="valError" />
 						<span id="error_1"></span>
 						</td>
 
-			</div>
+			</tr>
 
-			<div class="col">
-                <p class="form-type-left">Last Name</p>
-            <input name="last_name" type="text"  class="form-control" value="<?php echo (isset($_POST['last_name']) ? $_POST['last_name'] : $last_name); ?>" <?php  if($serial_details['resit-order'] != '') { echo "readonly";} ?>  />
+			<tr>
+			<td><p class="form-type-left">Last Name</p>
+            <input name="last_name" type="text"  value="<?php echo (isset($_POST['last_name']) ? $_POST['last_name'] : $last_name); ?>" <?php  if($serial_details['resit-order'] != '') { echo "readonly";} ?>  />
 						<span id="error_2"></span>
-			
-                        </div>
-                        </div>
+			</td>
 
-                        <div class="col-md-6">
-			<p><?php if(isset($_SESSION["admin_username"])) echo "Username (10 char.)"; else echo "E-Mail";?></p>
-            <input name="email"  id="email" type="text" class="form-control"  value="<?php echo (isset($_POST['email']) ? $_POST['email'] : $serial_details['username']); ?>"/>
+			</tr>
+
+			<tr>
+			<td><p><?php if(isset($_SESSION["admin_username"])) echo "Username (10 char.)"; else echo "E-Mail";?></p>
+            <input name="email"  id="email" type="text"  value="<?php echo (isset($_POST['email']) ? $_POST['email'] : $serial_details['username']); ?>"/>
 						<span id="error_3"></span>
-                        </div>
+			</td>
+
+			</tr>
 
             
 
@@ -637,9 +656,9 @@ email: "Please enter username (10 char.)",
 
 
 <?php if(isset($_SESSION["admin_username"])){?>
-    <div class="alert alert-dark" role="alert">
-                    The first and last name will appear on certificate. The username will be used for course log-in and can be any combination of words, numbers and symbols <strong> (at least 10 characters in length)</strong>. If candidate's email address is used a email confirming login will be sent this address and copied to relevant administrator.
-                </div>
+
+	<p>The first and last name will appear on certificate. The username will be used for course log-in and can be any combination of words, numbers and symbols (at least 10 characters in length). If candidate's email address is used a email confirming login will be sent this address and copied to relevant administrator.  
+</p> 
 
 
 
@@ -678,25 +697,23 @@ email: "Please enter username (10 char.)",
  	<h3 class="green">Select Site</h3>
 		<p>Allocate user to particular site</p>
 	
-
-				
+<table class="activate-res">
+					<tr>
 		
 		
-					
-                    <div class="col-md-6">
-					<select id="" name="site"   class="dropdown form-control" >
+					<td>
+					<select id="" name="site"   class="dropdown" >
 				<option value="">--Unspecified--</option>
 						<?php $sql_site = "SELECT * FROM site WHERE order_number='".$_SESSION['order_number']."' ORDER BY site"; $query_site = mysql_query($sql_site); ?>
 						<?php while($row = mysql_fetch_assoc($query_site)) { ?>
 						<option value="<?php echo $row['id'] ?>"<?php if ($serial_details['site_id'] == $row['id']) echo ' selected="selected"'; ?>><?php echo $row['site'] ?></option>
 						<?php } ?>
 					</select>
-                    </div>
 		
 		
-
-		
-	
+		</td>
+		</tr>
+		</table>
 	
 	<?php }  ?>
 
@@ -706,12 +723,14 @@ email: "Please enter username (10 char.)",
 <?php } ?>
 					
 
-<h3>Select Course</h3>
+ 	<h3 class="green">Select Course</h3>
 
-<div class="col-md-6">
+	<table class="activate-res">
+					<tr>
+					<td>
 
 
-					<select id="courseLang" name="courseSelect"   class="form-select form-control  valError" 				
+					<select id="courseLang" name="courseSelect"   class="dropdown  valError" 				
 					<?php $sql = "SELECT * FROM user_attempts WHERE user_id = '".$serial_details['ID']."'";
 $countAttempts = mysql_query($sql) or die(mysql_error());
 $countAttemptsResult = mysql_fetch_assoc($countAttempts);
@@ -729,7 +748,9 @@ if ($_SESSION['disableSelect'] > 0) {  ?>disabled <?php } ?>>
 <?php } ?>	
 					<span id="error_4"></span>
 		
-		</div>
+		</td>
+		</tr>
+		</table>
 
 
  	<h3 class="green" id="courseLangHeader">Course Language</h3>
@@ -922,8 +943,14 @@ for($i=0;$i<count($language_coshh);$i++){ ?>
 
 
 
-<div class="col-12">
-<input name="submit" type="submit" value="Submit"  class="btn btn-success"  />
+<div>
+<input name="submit" type="submit" value="Submit"  class="log-button"  />
+</div>
+<div>
+
+<br/>
+    
+
 <?php 
     
 if(isset($_SESSION['super_admin']) && $_SESSION['admin_type'] == 'super_admin'){
@@ -931,7 +958,7 @@ if(isset($_SESSION['super_admin']) && $_SESSION['admin_type'] == 'super_admin'){
     if($_SESSION['super_admin'] == 'yes'){
 
         ?>
-    <input name="cancel" type="button" value="Cancel"   class="log-button btn btn-danger" onclick="document.location.href='super-admin-serials.php?order_number=<?php echo $_SESSION["order_number"]; ?>'" />
+    <input name="cancel" type="button" value="Cancel"  class="log-button" onclick="document.location.href='super-admin-serials.php?order_number=<?php echo $_SESSION["order_number"]; ?>'" />
     <?php
     }
 }
@@ -942,94 +969,19 @@ else
 		<?php 	} 
 			else 
 			{       ?>
-    <input name="cancel" type="button" value="Cancel"  class="log-button btn btn-danger" onclick="document.location.href='admin-serials.php'" />
+    <input name="cancel" type="button" value="Cancel"  class="log-button" onclick="document.location.href='admin-serials.php'" />
     <?php
 }
     }
     
 ?>
 </div>
-
 </form>
 
-  <!-- <form class="row g-3">
-   <div class="pb-24">
-       <div class="row">
-           <div class="col">
-               <input type="text" class="form-control" placeholder="First name" aria-label="First name">
-           </div>
-           <div class="col">
-               <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
-           </div>
-       </div>
-   </div>
-  
-      <div class="col-md-6">
-          <label for="inputEmail4" class="form-label">Username (10 char)</label>
-          <input type="text" minlength="10" maxlength="20" value="Surajtiwari" class="form-control" id="inputEmail4">
-      </div>
-      <div class="alert alert-dark" role="alert">
-       The first and last name will appear on certificate. The username will be used for course log-in and can be any combination of words, numbers and symbols <strong> (at least 10 characters in length)</strong>. If candidate's email address is used a email confirming login will be sent this address and copied to relevant administrator.
-   </div>
-
-       <h3>Select Site</h3>
 
 
-      <div class="col-md-6">
-         
-          <select id="account_type" name="account"  class="form-select form-control">
-              <option value="" selected>Please select</option>
-              <option value="1" >Mayfair</option>
-              <option value="2">Vadodara</option>
-              <option value="2">Gujarat</option>
-              <option value="2">Rajkot</option>
-          </select>
-      </div>
-      
-       <h3>Select Course</h3>
+			</div><!-- content -->
+		</div><!-- wrapper -->
+        
 
-      <div class="col-md-6">
-          
-          <select id="account_type" name="account"  class="form-select form-control">
-              <option value="" selected>Please select</option>
-              <option value="1" >COSHH</option>
-              <option value="2">HACCP</option>
-              <option value="2">Health and Safety</option>
-          </select>
-      </div>
-      
-      <h3>Course Language</h3>
-      <fieldset class="row mb-3 mt-3">
-          <legend class="col-form-label col-sm-2 pt-0">*Array Will Be Diplay</legend>
-         
-      </fieldset>
-    
-      <div class="col-12">
-          <button type="submit" class="btn btn-success">Submit</button>
-          <button type="cancel" class="btn btn-danger">Cancel</button>
-      </div>
-      
-  </form>
-   -->
-</div>
-
-
-
-
-  
-</main>
-
-<!-- End Main Content Area -->
-
-<script>
-            $(window).ready( function() {
-           if($(window).width() > 850) {
-           $('#card').addClass('card-box-style2');
-           $('#card').removeClass('card-box-style');
-           }else{
-           $('#card').addClass('card-box-style');
-           $('#card').removeClass('card-box-style2');
-            }
-            })
-            </script>
-<?php include('footer2.php'); ?>
+<?php include('footer.php') ?>

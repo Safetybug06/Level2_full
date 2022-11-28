@@ -33,7 +33,7 @@ function send_email($to, $from, $host, $port, $user, $pass, $company, $subject, 
     $mail = new PHPMailer(true);                              // Passing `true` enables exceptions
     try {
         //Server settings
-        $mail->SMTPDebug = true;                                 // Enable verbose debug output
+        $mail->SMTPDebug = false;                                 // Enable verbose debug output
         $mail->isSMTP();                                      // Set mailer to use SMTP
         $mail->Host = $host;  // Specify main and backup SMTP servers
         $mail->SMTPAuth = true;                               // Enable SMTP authentication
@@ -74,7 +74,7 @@ function send_email_with_attachment($to, $from, $host, $port, $user, $pass, $com
     $mail = new PHPMailer(true);                              // Passing `true` enables exceptions
     try {
         //Server settings
-        $mail->SMTPDebug = true;                                 // Enable verbose debug output
+        $mail->SMTPDebug = false;                                 // Enable verbose debug output
         $mail->isSMTP();                                      // Set mailer to use SMTP
         $mail->Host = $host;  // Specify main and backup SMTP servers
         $mail->SMTPAuth = true;                               // Enable SMTP authentication

@@ -18,7 +18,7 @@
 		<link rel="stylesheet" href="assets/css/simplebar.min.css">
 		<link rel="stylesheet" href="assets/css/calendar.css">
         <link rel="stylesheet" href="assets/css/sweetalert2.min.css">
-		<link rel="stylesheet" href="assets/css/jbox.all.min.css">
+		
 		<link rel="stylesheet" href="assets/css/editor.css">
 		<link rel="stylesheet" href="assets/css/font-awesome.min.css">
 		<link rel="stylesheet" href="assets/css/loaders.css">
@@ -27,28 +27,11 @@
 		<link rel="stylesheet" href="assets/css/footer.css">
 		<link rel="stylesheet" href="assets/css/style.css">
 		<link rel="stylesheet" href="assets/css/responsive.css">
-    
-        <script src="assets/js/jquery.min.js"></script>
-        <script src="assets/js/form-validator.min.js"></script>
-        <script src="assets/js/contact-form-script.js"></script>
-        <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
-      
-
-
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 		<!-- Favicon -->
 		<link rel="icon" type="image/png" href="assets/images/favicon.svg">
 		<!-- Title -->
 		<title>Joxi - Bootstrap 5 Admin Dashboard Template</title>
-        <?php
-$includeGoogle=array('paypal.php', 'admin.php', 'log-in.php');
-$currentPage =basename( $_SERVER['PHP_SELF']);
-
-if (in_array($currentPage, $includeGoogle))
-    {
- include('process/googleAnalytics.php'); 
-	}
-
-?>
     </head>
 
     <body class="body-bg-f8faff">
@@ -57,29 +40,6 @@ if (in_array($currentPage, $includeGoogle))
             <img src="assets/images/Safetybug-logo.png" width="160" height="40" alt="main-logo">
         </div>
 		<!-- End Preloader Area -->
-
-
-        <?php
-$adminUrl=array('admin-serials.php');
-$currentPage =basename($_SERVER['PHP_SELF']);
-
-
-if (in_array($currentPage, $adminUrl))
-{
-	if (isset($_GET['orderNumberSelect'])) {  
-$orderNumberRef = ($_GET['orderNumberSelect']);
-$_SESSION["paginationBack"] =  'orderNumberSelect='. $orderNumberRef;
-}
-	if (isset($_GET['page'])) {  
-$pageRef = ($_GET['page']);
-$_SESSION["paginationBack"] =  'orderNumberSelect='. $orderNumberRef ."&page=". $pageRef;
-}
-
-
-	}
-
-
-?>
 
 		<!-- Start All Section Area -->
         <div class="all-section-area">
@@ -124,7 +84,7 @@ $_SESSION["paginationBack"] =  'orderNumberSelect='. $orderNumberRef ."&page=". 
                                             </li>
 
                                             <li class="nav-item">
-                                                <a class="nav-link " aria-current="page" href="<?php $site_url ?>paypal.php">SIGN UP</a>
+                                                <a class="nav-link " aria-current="page" href="register.html">SIGN UP</a>
                                             </li>
                                         <li class="nav-item dropdown">
                                                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -132,10 +92,10 @@ $_SESSION["paginationBack"] =  'orderNumberSelect='. $orderNumberRef ."&page=". 
                                                 </a>
 
                                                 <ul class="dropdown-menu">
-                                                    <li><a class="dropdown-item" href="<?php $site_url ?>activate.php">Activate your course</a></li>
-                                                    <li><a class="dropdown-item" href="<?php $site_url ?>admin.php">Administration</a></li>
+                                                    <li><a class="dropdown-item" href="activate.html">Activate your course</a></li>
+                                                    <li><a class="dropdown-item" href="admin.html">Admin Login</a></li>
                    
-                                                    <li><a class="dropdown-item" href="login.html">Log In</a></li>
+                                                    <li><a class="dropdown-item" href="login.html">User Login</a></li>
                                                 </ul>
                                             </li>
                                             <li class="nav-item">
@@ -155,3 +115,69 @@ $_SESSION["paginationBack"] =  'orderNumberSelect='. $orderNumberRef ."&page=". 
 
             <!-- Start Main Content Area -->
             <main class="main-content-wrap2">
+      <!-- Start Invoice Area -->
+                <div class="invoice-area">
+                    <div class="container-fluid">
+                        <div class="card-box-style  ">
+                            <div class="others-title">
+                                <h1 style="text-align:center;">Activation Complete</h1>
+            
+                            </div>
+                                <div class="">
+                                     <p class="mt-2 mb-0 " style="text-align:center;"><br> An E-mail has been sent to <strong style="color: green;"> admin123@gmail.com.</strong> This contains your unique password and completes activation.</p>
+                                    <p class="mt-2 mb-0" style="text-align:center;">   NB: If E-mail does not arrive please check spam/junk folder.</p>
+                              
+            
+                                
+                            </div>
+
+            
+                            
+                        </div>
+                    </div>
+                </div>
+                <!-- End Invoice Area -->
+
+        
+
+                <!-- Start Footer Area -->
+                <div class="footer-area fixed-bottom">
+                    <div class="container-fluid">
+                        <div class="footer-content ">
+                            <p>© 2022 <a href="https://safetybugtraining.com/" target="_blank">Safetybug Training</a></p>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Footer Area -->
+
+            </main>
+            <!-- End Main Content Area -->
+        </div>
+        <!-- End All Section Area -->
+
+        
+
+		<!-- Start Go Top Area -->
+		<div class="go-top">
+			<i class="ri-arrow-up-s-fill"></i>
+			<i class="ri-arrow-up-s-fill"></i>
+		</div>
+		<!-- End Go Top Area -->
+       <!-- Jquery Min JS -->
+        <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="assets/js/jquery.min.js"></script> 
+        <script src="assets/js/bootstrap.bundle.min.js"></script>
+		<script src="assets/js/owl.carousel.min.js"></script>
+        <script src="assets/js/metismenu.min.js"></script>
+        <script src="assets/js/simplebar.min.js"></script>
+        <script src="assets/js/apexcharts/apexcharts.min.js"></script>
+        <script src="assets/js/apexcharts/website-analytics.js"></script>
+        <script src="assets/js/geticons.js"></script>
+        <script src="assets/js/calendar.js"></script>
+        <script src="assets/js/editor.js"></script>
+		<script src="assets/js/form-validator.min.js"></script>
+		<script src="assets/js/contact-form-script.js"></script>
+		<script src="assets/js/ajaxchimp.min.js"></script>
+		<script src="assets/js/custom.js"></script>
+    </body>
+
+</html>
