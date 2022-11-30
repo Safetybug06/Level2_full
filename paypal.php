@@ -1,5 +1,6 @@
 <?php include('config.php'); ?>
 <?php include('header1.php'); ?>
+
 <h3>
 <?php 
       
@@ -56,7 +57,7 @@
                         <div class="col-lg-6 col-md-6 md-mb-30">
                             <div class="rs-addon-number">
                                 <div class="number-part">
-                                    <a href="activate.html">
+                                    <a href="activate.php">
                                     <div class="number-image">
                                         <img src="assets/images/process/style1/power.png" alt="Process">
                                     </div>
@@ -69,11 +70,11 @@
                                             </h3>
                                         </div>
                                        
-                                        <a href="activate.html">  <div class="btn btn-secondary mb-1" role="alert">
+                                        <a href="activate.php">  <div class="btn btn-secondary mb-1" role="alert">
                                             <h4 class="alert-heading"> Click Here for Activate</h4>
                                             If You already Purchased Serials Click here For Activation 
                                         </div></a>
-                                        <a href="login.html">
+                                        <a href="log-in.php">
                                         <div class="btn btn-secondary mb-1" role="alert">
                                             <h4 class="alert-heading"> Click Here for Login</h4>
                                             If You already Activated Serials

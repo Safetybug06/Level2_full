@@ -37,6 +37,7 @@
         <script src="assets/js/metismenu.min.js"></script>
         <script src="assets/js/simplebar.min.js"></script>
         <script src="assets/js/apexcharts/apexcharts.min.js"></script>
+       
         <script src="assets/js/apexcharts/website-analytics.js"></script>
         <script src="assets/js/geticons.js"></script>
         <!-- <script src="assets/js/calendar.js"></script> -->

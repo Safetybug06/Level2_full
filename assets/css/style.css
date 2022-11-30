@@ -111,7 +111,7 @@ img {
 .form-group.icon i {
   position: absolute;
   top: 19px;
-  left: 20px;
+  right: 20px;
 }
 
 .form-control {
@@ -6091,5 +6091,17 @@ Page-navigation Area Style*/
   background-size: cover;
 }
 
-/* sort  */
+/* error  
+form validation
+*/
+#orderForm .error , #activate2_form .error, #generate-pdf .error {
+color:#ff0000; 
+}
+
+#activate2_form .error.valError {
+
+ border:#ff0000 solid 1px
+}
+
+.err_highlight {  border:#fff solid 1px }
 

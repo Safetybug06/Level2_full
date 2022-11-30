@@ -282,8 +282,9 @@ if (count($_POST)) {
                                     <img src="assets/images/icon/key.svg" alt="key">
                                 </div>
                               
+
                                 <div class="form-group mb-24">
-                                    <a href="forget-password.html" class="forgot">Forgot Password?</a>
+                                    <a href="forgot-admin_login.php" class="forgot">Forgot Password?</a>
                                 </div>
                                 <div class="form-group mb-24">
                                     <button id="logIn" name="" type="submit" class="default-btn">Log In</button>

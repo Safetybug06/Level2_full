@@ -1,13 +1,6 @@
 <?php include('config.php'); ?>
 <?php
 
-// if (!isset($_SESSION["serial"]) || !strlen($_SESSION["serial"])) {
-
-// 	header('location: activate.php');
-// 	exit;
-
-// }
-
 $err = "";
 
 $sql = "SELECT * FROM user WHERE serial='".$_SESSION["serial"]."' LIMIT 1";

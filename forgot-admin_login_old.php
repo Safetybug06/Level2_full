@@ -1,4 +1,5 @@
 <?php include('config.php'); ?>
+
 <?php 
 
 $err = "";
@@ -210,7 +211,13 @@ if(count($_POST)) {
 }
 
 ?>
-<?php include('header1.php'); ?>
+
+<?php include('header.php') ?>
+
+
+
+
+
 
 
 <script type="text/javascript">	
@@ -293,65 +300,96 @@ if(count($_POST)) {
 
 
 
-<!-- Start Account Area -->
-<div id="content" class="account-area">
-            <div class="d-table">
-                <div class="d-table-cell">
-                    <div class="container">
-                        <div class="account-content">
-                            <div class="account-header">
-                                <a href="index.html">
-                                    <img src="assets/images/SBT-logo-01.png" width="160" height="40" alt="main-logo">
-                                </a>
-                                <h3>Forget Password</h3>
-                            </div>
+
+
+<section class="header header-style2" style="background:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url(images/img_04.jpg) 50% 50% ; background-size:cover;">
+
+    <div class="header-content">
+
+	    <h1>
+
+Forgotten LOG IN</h1>
+
+    </div>
+
+</section>
+
+
+
+
+
+<div id="content">
+
+
+
+
+
+
+
+ 	<h3 class="green">Forgotten Log-In</h3>
+
+		<?php if($err){
+
+    		echo '<p style="color:red;">'.$err.'</p>';
+
+		}
+
+
+
+        if ($sent_to) { ?>
+
+		<p>A password reset link has been sent to <strong><?php echo $sent_to ?></strong></p>
+
+        <!--<p class="forgotten-password">(Please check 'spam' folder if email does not arrive).</p>-->
+
+                
+
+                
+
+		<?php } else { ?>
+
+		<p>Please enter E-mail used for Signup</p>
+
+		<?php if (strlen($err)) { echo '<p class="error">'.$err.'</p>'; } ?>
+
+	<form id="email_form" action="" method="post">
+
+	<table <table class="login-res">
+
+				<tr>
+
+<td><p>E-Mail:</p>
+
+<input id="email" name="email" type="text" class="text-field"  /></td>
+
+				</tr>
+
+				<tr>
+
+			<td><br/>
+
+            <input name="" type="submit" value="Submit"  class="log-button right" />		</td>
+
+				</tr>
+
+			</table>
+
+		</form>
+
+		<?php } ?>
+
+
+
+
+
+
+
+		</div><!-- content -->
+
+		</div><!-- wrapper -->
+
         
-                            <div class="alert alert-success" role="alert">
-                                <h4 class="alert-heading">Account Recovery!</h4>
-                                <?php if($err){
 
-echo '<p style="color:red;">'.$err.'</p>';
-
-}
-
-
-
-if ($sent_to) { ?>
-
-<p>A password reset link has been sent to <strong><?php echo $sent_to ?></strong></p>
-
-<!--<p class="forgotten-password">(Please check 'spam' folder if email does not arrive).</p>-->
-
-    
-
-    
-
-<?php } else { ?>
-
-<p>Please enter E-mail used for Signup</p>
-
-<?php if (strlen($err)) { echo '<p class="error">'.$err.'</p>'; } ?>
-                               
-                            </div>
-                           
         
-                            <form id="email_form" action="" method="post" class="account-wrap">
-                                <div class="form-group mb-24 icon">
-                                    <input id="email" name="email" type="text"  class="form-control" placeholder="Email" />
-                                    <img src="assets/images/icon/sms.svg" alt="sms">
-                                </div>
-                                <div class="form-group mb-24">
-                                    <button name="" type="submit" value="Submit" class="default-btn">Submit</button>
-                                </div>
-                                
-                            </form>
-                            <?php } ?>
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        </div>
-        <!-- End Account Area -->
-<?php include('footer1.php'); ?>
+
+<?php include('footer.php') ?>

@@ -120,6 +120,47 @@ if(isset($_GET['failed']))
 -->
 
 </script>
+<script>
+    $(document).ready(function() {
+  $("#serial1").keyup(function() {
+    var div = $('#pro1');
+    var div0 = $('#pro0');
+    if ($("#serial1").val().length > 3) {
+      div.show();
+      div0.hide();
+    } else {
+      div.hide();
+    }
+  });
+  $("#serial2").keyup(function() {
+    var div1 = $('#pro2');
+    var div2 = $('#pro1');
+    var div8 = $('#pro0');
+    if ($("#serial2").val().length > 3) {
+      div1.show();
+      div2.hide();
+      div8.hide();
+    } else {
+      div1.hide();
+    }
+  });
+  $("#serial3").keyup(function() {
+    var div3 = $('#pro3');
+    var div4 = $('#pro1');
+    var div5= $('#pro2');
+    var div7= $('#pro0');
+    if ($("#serial3").val().length > 3) {
+      div3.show();
+      div4.hide();
+      div5.hide();
+      div7.hide();
+    } else {
+      div3.hide();
+    }
+  });
+});
+</script>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
 
             <!-- Process Section Start -->
             <div class="rs-process style1  pt-100 pb-100 md-pt-70 md-pb-70">
@@ -229,26 +270,35 @@ if ($err != "") echo '<p style="color:red;font-weight:bold">'.$err.'</p>';
                                 <div class="row g-1 mb-24">
                                     
                                     <div class="col-sm">
-                                        <input name="serial1" type="text" maxlength="4" placeholder="1234"  class="form-control required" onkeyup="autotab(this, document.activate_form.serial2)" />
+                                        <input id="serial1" name="serial1" type="text" maxlength="4" placeholder="1234"  class="form-control required" onkeyup="autotab(this, document.activate_form.serial2)" />
                                     </div>
                                     <div class="col-sm">
-                                        <input name="serial2" type="text" maxlength="4" placeholder="1234"  class="form-control required" onkeyup="autotab(this, document.activate_form.serial3)"   />
+                                        <input id="serial2" name="serial2" type="text" maxlength="4" placeholder="1234"  class="form-control required" onkeyup="autotab(this, document.activate_form.serial3)"   />
                                     </div>
                                     <div class="col-sm">
-                                        <input name="serial3" type="text" maxlength="4" class="form-control required" placeholder="1234" onkeyup="autotab(this, document.activate_form.serial4)" />
+                                        <input id="serial3" name="serial3" type="text" maxlength="4" class="form-control required" placeholder="1234" onkeyup="autotab(this, document.activate_form.serial4)" />
                                     </div>
                                     <div class="col-sm">
                                         <input name="serial4" type="text" maxlength="4" class="form-control required" placeholder="1234"  />
                                     </div>
                                 </div>
-                                <div class="progress mb-3">
+                                <div id="pro0" class="progress mb-3">
+                                    <div class="progress-bar progress-bar-striped bg-success" role="progressbar" aria-label="Success striped example" style="width: 10%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <div id="pro1" style="display: none;" class="progress mb-3">
                                     <div class="progress-bar progress-bar-striped bg-success" role="progressbar" aria-label="Success striped example" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <div id="pro2" style="display: none;" class="progress mb-3">
+                                    <div class="progress-bar progress-bar-striped bg-success" role="progressbar" aria-label="Success striped example" style="width: 50%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <div id="pro3" style="display: none;" class="progress mb-3">
+                                    <div class="progress-bar progress-bar-striped bg-success" role="progressbar" aria-label="Success striped example" style="width: 75%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                                 <div class="form-group mb-24">
                                     <button name="" id="submit_btn" type="submit" value="Submit" class="default-btn">Submit</button>
                                 </div>
                                 <div class="form-group mb-24 text-center">
-                                    <p class="account">Not A Member? <a href="paypal.php">Create An Account</a></p>
+                                    <p class="account">Don't have Activation key? <a href="paypal.php">Buy Key</a></p>
                                 </div>
                             </form>
         
@@ -259,6 +309,8 @@ if ($err != "") echo '<p style="color:red;font-weight:bold">'.$err.'</p>';
             </div>
         </div>
         <!-- End Account Area -->
+
+        
 
 <!-- 
      

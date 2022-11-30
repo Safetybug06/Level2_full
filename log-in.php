@@ -1,4 +1,5 @@
 <?php include('config.php'); ?>
+
 <?php
 
 $err = "";
@@ -55,6 +56,8 @@ if (count($_POST)) {
 
 ?>
 <?php include('header1.php'); ?>
+<link rel="stylesheet" href=
+"https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
 
 <script type="text/javascript">	
 
@@ -149,9 +152,9 @@ if (count($_POST)) {
                                 <a href="index.html">
                                     <img src="assets/images/SBT-logo-01.png" width="160" height="40" alt="main-logo">
                                 </a>
-                                <h3>Login</h3>
+                                <h3>Course Login</h3>
                             </div>
-                            <div class="alert alert-secondary alert-dismissible fade show" role="alert">
+                            <div id="successMessage" class="alert alert-secondary alert-dismissible fade show" role="alert">
                                 <strong>First time here?</strong> After logging in below, click on the 'activate assessment' link which will take you to your first module.
                                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                             </div>
@@ -177,6 +180,8 @@ if ($err != "") echo ' <div class="alert alert-danger alert-dismissible fade sho
                                 <div class="form-group mb-24 icon">
                                     <input id="password" name="password" type="password"  class="form-control" placeholder="Password">
                                     <img src="assets/images/icon/key.svg" alt="key">
+									<i style="align-items: right;" class="bi bi-eye-slash" 
+                                    id="togglePassword"></i>
                                 </div>
                                 <div class="form-group mb-24">
                                     <a href="forgot-login.php" class="forgot">Forgot Password?</a>
@@ -185,7 +190,7 @@ if ($err != "") echo ' <div class="alert alert-danger alert-dismissible fade sho
                                     <button id="logIn" name="" type="submit" value="Log-in"  class="default-btn">Log In</button>
                                 </div>
                                 <div class="form-group mb-24 text-center">
-                                    <p class="account">Not A Member? <a href="register.html">Create An Account</a></p>
+                                    <p class="account">Not A Member? <a href="paypal.php">Create An Account</a></p>
                                 </div>
                             </form>
 
@@ -195,5 +200,36 @@ if ($err != "") echo ' <div class="alert alert-danger alert-dismissible fade sho
                 </div>
             </div>
         </div>
+		<script>
+            const togglePassword = document
+                .querySelector('#togglePassword');
+      
+            const password = document.querySelector('#password');
+      
+            togglePassword.addEventListener('click', () => {
+      
+                // Toggle the type attribute using
+                // getAttribure() method
+                const type = password
+                    .getAttribute('type') === 'password' ?
+                    'text' : 'password';
+                      
+                password.setAttribute('type', type);
+      
+                // Toggle the eye and bi-eye icon
+                this.classList.toggle('bi-eye');
+            });
+        </script>
+		<script>
+           
+
+		//    This Script For Hidding Div After defined time interval 
+
+// $(function() {
+//     setTimeout(function() {
+//   $('#successMessage').fadeOut('slow');
+// }, 10000);
+// });
+//         </script>
         <!-- End Account Area -->
 <?php include('footer1.php'); ?>

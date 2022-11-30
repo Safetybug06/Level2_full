@@ -135,7 +135,7 @@ $_SESSION["paginationBack"] =  'orderNumberSelect='. $orderNumberRef ."&page=". 
                                                     <li><a class="dropdown-item" href="<?php $site_url ?>activate.php">Activate your course</a></li>
                                                     <li><a class="dropdown-item" href="<?php $site_url ?>admin.php">Administration</a></li>
                    
-                                                    <li><a class="dropdown-item" href="login.html">Log In</a></li>
+                                                    <li><a class="dropdown-item" href="<?php $site_url ?>log-in.php">Log In</a></li>
                                                 </ul>
                                             </li>
                                             <li class="nav-item">
