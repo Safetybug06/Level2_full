@@ -1,7 +1,14 @@
 <?php include('config.php'); ?>
 <?php
 
-$err = "";
+// if (!isset($_SESSION["serial"]) || !strlen($_SESSION["serial"])) {
+
+// 	header('location: activate.php');
+// 	exit;
+
+// }
+
+// $err = "";
 
 $sql = "SELECT * FROM user WHERE serial='".$_SESSION["serial"]."' LIMIT 1";
 $query = mysql_query($sql);
@@ -563,13 +570,7 @@ email: "Please enter username (10 char.)",
 			$('#error_5').hide();
           }
         })
-		  
-		  
-	
 	});
-
-	
-
 
 </script>
  <div id="card" class="card-box-style2">
@@ -577,6 +578,7 @@ email: "Please enter username (10 char.)",
       <h3><?php if(isset($_SESSION["admin_username"])) echo ($serial_details['activated']=="yes") ? "Edit serial" : "Admin Serial Activation"; else echo "User Details"?></h3>
       <p><?php if ($serial_details['activated']!="yes") if(isset($_SESSION["admin_username"])) echo "To activate the serial on behalf of student, please provide the following information:"; else echo "To activate serial please provide the following information:"?></p>
     </div>
+	
     <?php
 
 			if ($err != "") echo '<p class="error" style="font-weight:bold; color:#ff0000; ">'.$err.'</p>';
@@ -617,25 +619,11 @@ email: "Please enter username (10 char.)",
             <input name="email"  id="email" type="text" class="form-control"  value="<?php echo (isset($_POST['email']) ? $_POST['email'] : $serial_details['username']); ?>"/>
 						<span id="error_3"></span>
                         </div>
-
-            
-
 </table>
-
-
-
-
-
-
-
-
 <?php if(isset($_SESSION["admin_username"])){?>
     <div class="alert alert-dark" role="alert">
                     The first and last name will appear on certificate. The username will be used for course log-in and can be any combination of words, numbers and symbols <strong> (at least 10 characters in length)</strong>. If candidate's email address is used a email confirming login will be sent this address and copied to relevant administrator.
                 </div>
-
-
-
 	
 	<?php if($serial_details['activated']=="yes"){ ?>
 		<?php
@@ -644,9 +632,7 @@ email: "Please enter username (10 char.)",
  	<h3 class="green">Deactivate</h3>
 				<p>You may 'deactivate' and re-use this serial (no modules have been passed).</p>
 <table  class="activate-res">
-					<tr>
-		
-		
+					<tr>				
 					<td><p class="form-type-left">Deactivate Serial:</p>
 					
 						<table>

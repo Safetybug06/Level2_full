@@ -36,9 +36,9 @@
 
 
 		<!-- Favicon -->
-		<link rel="icon" type="image/png" href="assets/images/favicon.svg">
+		<link rel="icon" type="image/png" href="assets/images/Safetybug_icon.png">
 		<!-- Title -->
-		<title>Joxi - Bootstrap 5 Admin Dashboard Template</title>
+		<title>Safety Bug Training</title>
         <?php
 $includeGoogle=array('paypal.php', 'admin.php', 'log-in.php');
 $currentPage =basename( $_SERVER['PHP_SELF']);

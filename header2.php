@@ -33,8 +33,9 @@
         <script src="assets/js/form-validator.min.js"></script>
         <script src="assets/js/contact-form-script.js"></script>
         <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
-		<!-- Favicon -->
-		<link rel="icon" type="image/png" href="assets/images/favicon.svg">
+			<!-- Favicon -->
+            <link rel="icon" type="image/png" href="assets/images/Safetybug_icon.png">
+                
         
 		<!-- Title -->
 		<title>Safetbug Training</title>
@@ -92,7 +93,7 @@ $_SESSION["paginationBack"] =  'orderNumberSelect='. $orderNumberRef ."&page=". 
                                 </div>
         
                                 <div class="main-logo">
-                                    <a href="http://safetybugtraining.com"">
+                                    <a href="http://safetybugtraining.com">
                                         <img src="assets/images/Safetybug white.png" width="250" alt="main-logo">
                                     </a>
                                 </div>
@@ -135,9 +136,7 @@ $_SESSION["paginationBack"] =  'orderNumberSelect='. $orderNumberRef ."&page=". 
         
                                     
                                 </div>
-        
-                                
-                               
+            
                             </div>
                         </div>
                     </div>
