@@ -323,42 +323,9 @@ if (isset($_GET['order_by'])) {
 }
 
 
-
-
-
 $filter_by = isset($_SESSION['filter_by']) ? $_SESSION['filter_by'] : '';
 
 $order_by = isset($_SESSION['order_by']) ? $_SESSION['order_by'] : '';
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ?>
 <?php include('header2.php'); ?>
@@ -378,7 +345,7 @@ $order_by = isset($_SESSION['order_by']) ? $_SESSION['order_by'] : '';
                     <span class="menu-title">All Users</span>
                 </a>
             </li>
-
+            <?php if ($_SESSION["admin_type"] != "Additional") { ?>
             <li id="demo_user">
                 <a href="#" class="box-style d-flex align-items-center">
                     <div class="icon">
@@ -387,6 +354,8 @@ $order_by = isset($_SESSION['order_by']) ? $_SESSION['order_by'] : '';
                     <span class="menu-title">Additional Administrators</span>
                 </a>
             </li>
+            <?php } ?>
+            <?php if ($_SESSION["admin_type"] != "Additional") { ?>
             <li id="certificate1">
                 <a href="#" class="box-style d-flex align-items-center">
                     <div class="icon">
@@ -395,6 +364,7 @@ $order_by = isset($_SESSION['order_by']) ? $_SESSION['order_by'] : '';
                     <span class="menu-title">Certificates</span>
                 </a>
             </li>
+            <?php } ?>
             <?php if (isset($_SESSION["site_admin"]) && (int) $_SESSION["site_admin"]) { ?>
             <li id="site_admin1">
                 <a href="#" class="box-style d-flex align-items-center">
@@ -1338,15 +1308,15 @@ $order_by = isset($_SESSION['order_by']) ? $_SESSION['order_by'] : '';
                 <form method="post" class="row g-3">
                     <div class="col-md-3">
                         <label for="inputEmail4" class="form-label">*First Name</label>
-                        <input id="name" name="name" type="text" class="form-control">
+                        <input id="name" name="name" required type="text" class="required form-control">
                     </div>
                     <div class="col-md-3">
                         <label for="inputEmail4" class="form-label">*Position</label>
-                        <input id="position" name="position" type="text" class="form-control">
+                        <input id="position" name="position" required type="text" class="form-control">
                     </div>
                     <div class="col-md-3">
                         <label for="inputEmail4" class="form-label">*Email</label>
-                        <input id="email" name="email" type="email" class="form-control">
+                        <input id="email" name="email" type="email" required class="form-control">
                     </div>
                     <div class="col-md-3">
                         <label for="inputEmail4" class="form-label">Password (Automatic)</label>
@@ -1358,7 +1328,7 @@ $order_by = isset($_SESSION['order_by']) ? $_SESSION['order_by'] : '';
               Please complete all fields correctly</p>
                     <div class="col-12">
                         <!-- <button id="create" type="submit" value="Confirm and Create" class="btn btn-primary">Confirm And Create</button> -->
-                        <input type="submit" value="Confirm and Create" id="create"   class="btn btn-primary" />
+                        <input type="submit" value="Confirm and Create"   class="btn btn-primary" />
                         <input type="hidden" value="<?php echo $password; ?>" name="the_new_password" />
                         <p style="color:#ff0000">NB: This will create the new log-in and send email to the new administrator (excluding the password). You will see the password on the screen and must communicate this to the new administrator. <strong>The new password will only be shown once - if you navigate away they will have to reset their password</strong></p>
                     </div>
@@ -1388,11 +1358,10 @@ $order_by = isset($_SESSION['order_by']) ? $_SESSION['order_by'] : '';
 
                 </div>
                 <div class="col-md-12">
-                    <input id="my-button" name="add" type="submit" value="Update" class="btn btn-primary">
+                    <input id="my-button" name="add" type="submit" value="Update" class="btn btn-primary" />
                     <!-- <input id="reset-cc" name="add" type="button" value="Set to default" class="btn btn-success"> -->
-                    <input id="reset-cc" name="add" type="button" value="Set to default"  class="log-button"  />
+                    <input id="reset-cc" name="add" type="button" value="Set to default"  class="btn btn-primary"  />
                 </div>
-
             </form>
             <p style=" display:none" id="cc_update_message">Certificate E-mail updated successfully</p>
 
@@ -1404,9 +1373,9 @@ $order_by = isset($_SESSION['order_by']) ? $_SESSION['order_by'] : '';
             </div>
             <script>
 
-<!--
-
-$(document).ready(function() {
+                
+                $(document).ready(function() {
+    <!--
 
       $('#reset-cc').click(function() {
 

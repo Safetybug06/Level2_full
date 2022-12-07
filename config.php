@@ -5,7 +5,7 @@
     require 'classes/PasswordHash.php';
 
 
-ini_set('display_errors',true);
+ini_set('display_errors',false);
 
 /****** DATABASE SETTINGS *************************************/
 

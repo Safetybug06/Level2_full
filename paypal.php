@@ -1,18 +1,14 @@
 <?php include('config.php'); ?>
 <?php include('header1.php'); ?>
 
-<h3>
+<h3 style="text-align: center;" class="card-text mt-24 mb-24" >
 <?php 
       
       if (isset($_SESSION["admin_username"])) echo  "Additional Serials";
                ?>
                </h3>
      <!-- Process Section Start -->
-    
-     
-  
-    
-    
+
      <?php if (!isset($_SESSION["admin_username"])) { ?>
      <div class="rs-process style1  pt-100 pb-100 md-pt-70 md-pb-70">
             <div class="container pb-54">
@@ -193,9 +189,11 @@
                         <legend class="col-form-label col-sm-2 pt-0 ">Specify User required</legend>
                     
                         <div class="col-sm-2 ">
-                                <input type="number" name="multi_users" min="0" max="1000" maxlength="4" value="1" class="form-control" id="order_product">
+                                <input type="number" name="multi_users" value="1" min="0" max="10000" maxlength="5"  class="form-control" id="order_product">
+                                <!-- <input type="range" name="multi_users" min="0" max="1000" maxlength="4" value="1" oninput="this.nextElementSibling.value = this.value" class="form-control" id="order_product">
+                                 <output>1</output> -->
                                 <span id="error_7">
-                                <!-- <input type="range" , id="user" min="0" max="1000" maxlength="4" value="500" class="form-control" id="inputEmail4"> -->
+                                
                         </div>
                         <div class="col-sm-2 ">
                                 
@@ -225,15 +223,14 @@
                         </div>
                     </div>
                     <div class="col-3">
-                        <button name="Order with PayPal" type="submit"  value="Order Now" class="btn btn-primary">Sign in</button>
+                        <button name="Order with PayPal" type="submit"  value="Order Now" class="btn btn-success">Order Now</button>
                         
                         <div>
                         <?php if (isset($_SESSION["admin_username"])) { ?><br/><input name="cancel" type="button" value="Cancel"  class="btn btn-danger" onClick="document.location.href = 'admin-serials.php'" /><?php } ?>
                         </div>
                     </div>
-                   
-                    
                 </form>
+
                 <div class="card-text">
                     <td>
                 <p>(*)Required field
