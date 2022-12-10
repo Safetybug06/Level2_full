@@ -1114,6 +1114,60 @@ $order_by = isset($_SESSION['order_by']) ? $_SESSION['order_by'] : '';
 
     <?php } ?>
 
+<!-- Quation  -->
+<div id="qa" class="card-box-style" style="display: none;">
+    <div id="add_site" class="car">
+        <div class="others-title">
+            <h3>Download English Q/A</h3>
+        </div>
+        <div class="main-title d-flex justify-content-between align-items-center">
+            <form class="col-md-4">
+
+
+                <select id="courseSelect" class="form-select form-control">
+                    <?php $sql_course = "SELECT * FROM course ORDER BY course_ID";
+                    $courseSelect = mysql_query($sql_course); ?>
+                    <?php while ($row = mysql_fetch_assoc($courseSelect)) { ?>
+                        <option value="<?php echo $row['course_ID'] ?>"><?php echo $row['course_name'] ?></option>
+
+                    <?php } ?>
+
+
+                </select>
+
+
+                <!-- <input id="allergenQA" type="button"  onclick="window.open('course/allergen/download/Allergen.pdf');"  value="Download"  class="log-button" style="display:none;"> -->
+
+                <!-- <input id="fsl2QA" type="button"  onclick="window.open('course/fsl2/download/FoodSafetyLevel2.pdf');"  value="Download"  class="log-button"> -->
+
+
+
+            </form>
+            <div class="col-md-4">
+                <button id="allergenQA" type="button" onclick="window.open('course/allergen/download/Allergen.pdf');" value="Download" class="btn btn-primary" style="display:none;">Download</button>
+                <button id="fsl2QA" type="button" onclick="window.open('course/fsl2/download/FoodSafetyLevel2.pdf');" value="Download" class="btn btn-primary">Download</button>
+                <!-- <input id="allergenQA" type="button"  onclick="window.open('course/allergen/download/Allergen.pdf');"  value="Download"  class="log-button" style="display:none;"> -->
+            </div>
+        </div>
+        <!-- <form class="row g-3">
+            <div class="col-md-3">
+                <label for="inputEmail4" class="form-label">*Site Name</label>
+                <input type="text" class="form-control" id="inputEmail4">
+            </div>
+           
+            
+            
+           
+           
+            <div class="col-12">
+                <button id="add_site_btn" type="submit" class="btn btn-primary">Confirm New site</button>
+            </div>
+        </form> -->
+    </div>
+
+</div>
+<!-- Quation end  -->
+
 
     <!-- Additinal Administration  -->
     <div id="demo" class="total-visits-browse-area" style="display: none;">
@@ -2139,60 +2193,6 @@ if (mysql_num_rows($sites_fetch)){
 
 <?php } ?>
 <!-- site admin end  -->
-
-<!-- Quation  -->
-<div id="qa" class="card-box-style" style="display: none;">
-    <div id="add_site" class="car">
-        <div class="others-title">
-            <h3>Download English Q/A</h3>
-        </div>
-        <div class="main-title d-flex justify-content-between align-items-center">
-            <form class="col-md-4">
-
-
-                <select id="courseSelect" class="form-select form-control">
-                    <?php $sql_course = "SELECT * FROM course ORDER BY course_ID";
-                    $courseSelect = mysql_query($sql_course); ?>
-                    <?php while ($row = mysql_fetch_assoc($courseSelect)) { ?>
-                        <option value="<?php echo $row['course_ID'] ?>"><?php echo $row['course_name'] ?></option>
-
-                    <?php } ?>
-
-
-                </select>
-
-
-                <!-- <input id="allergenQA" type="button"  onclick="window.open('course/allergen/download/Allergen.pdf');"  value="Download"  class="log-button" style="display:none;"> -->
-
-                <!-- <input id="fsl2QA" type="button"  onclick="window.open('course/fsl2/download/FoodSafetyLevel2.pdf');"  value="Download"  class="log-button"> -->
-
-
-
-            </form>
-            <div class="col-md-4">
-                <button id="allergenQA" type="button" onclick="window.open('course/allergen/download/Allergen.pdf');" value="Download" class="btn btn-primary" style="display:none;">Download</button>
-                <button id="fsl2QA" type="button" onclick="window.open('course/fsl2/download/FoodSafetyLevel2.pdf');" value="Download" class="btn btn-primary">Download</button>
-                <!-- <input id="allergenQA" type="button"  onclick="window.open('course/allergen/download/Allergen.pdf');"  value="Download"  class="log-button" style="display:none;"> -->
-            </div>
-        </div>
-        <!-- <form class="row g-3">
-            <div class="col-md-3">
-                <label for="inputEmail4" class="form-label">*Site Name</label>
-                <input type="text" class="form-control" id="inputEmail4">
-            </div>
-           
-            
-            
-           
-           
-            <div class="col-12">
-                <button id="add_site_btn" type="submit" class="btn btn-primary">Confirm New site</button>
-            </div>
-        </form> -->
-    </div>
-
-</div>
-<!-- Quation end  -->
 
 <!-- end form -->
 <script>
